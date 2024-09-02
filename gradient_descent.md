@@ -17,21 +17,24 @@ graph TD
 
 ## 物体認識タスク
 
-- AlexNet
-  - 2012年ILSVRC優勝
-- VGG
-  - フィルタサイズを3✕3に統一
-- GoogLeNet
-  - 2014年ILSVRC優勝
+- AlexNet(8層)
+  - ILSVR2012にて優勝
+  - ジェフリー・ヒントンが率いたチーム
+- GoogLeNet(22層)
+  - ILSVR2014にて優勝
   - Inceptionモジュールの導入
-- ResNet
+- VGG16(16層)
+  - ILSVR2014にて準優勝
+  - フィルタサイズを3✕3に統一
+- ResNet(152層)
+  - ILSVR2015にて優勝 
   - スキップ結合の導入
 - WideResNet
   - フィルタ数を増やす
 - DenseNet
-  - スキップ結合を工夫した派生モデル
+  - Dense Block
 - SENet
-  - ILSVRC2017年優勝
+  - ILSVR2017にて優勝
   - Attention機構の導入
 - MovileNet
   - メモリ量が限られている環境での利用を想定
