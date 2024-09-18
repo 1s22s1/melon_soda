@@ -14,9 +14,9 @@ function parsestrings()
 end
 
 function solve()
-    a,b = parseints()
+    a, b = parseints()
 
-    outcome = max(a+b, a-b, a*b)
+    outcome = max(a + b, a - b, a * b)
 
     println(outcome)
 end

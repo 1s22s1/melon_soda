@@ -19,7 +19,7 @@ function solve()
     if a ≤ 5
         println(0)
     elseif 6 ≤ a ≤ 12
-        println(b÷2)
+        println(b ÷ 2)
     else
         println(b)
     end
