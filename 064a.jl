@@ -16,7 +16,7 @@ end
 function solve()
     r, g, b = parseints()
 
-    if((100r + 10g + b) % 4 == 0)
+    if ((100r + 10g + b) % 4 == 0)
         println("YES")
     else
         println("NO")
