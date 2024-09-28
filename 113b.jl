@@ -13,27 +13,30 @@ function parsestrings()
     return readline() |> split
 end
 
+function temperature(t, x)
+    return 1000t-6x
+end
+
 function solve()
     n = parseint()
     t, a = parseints()
     hn = parseints()
 
-    outcome = 1
-    outcome_templature = abs(a - t - hn[1] * 0.006)
+    # 温度は1000倍して計算する
+
+    outocome = 1
+    outcome_temperature = temperature(t, hn[1])
 
     for i ∈ 2:n
-        current_templature = abs(a - t - hn[i] * 0.006)
+        currente_temperature = temperature(t, hn[i])
 
-        @show i, hn[i], current_templature, outcome, outcome_templature
-
-        if current_templature < outcome_templature
-            outcome = i
-            current_templature = outcome_templature
+        if abs(currente_temperature - 1000a) < abs(outcome_temperature - 1000a)
+            outcome_temperature = currente_temperature
+            outocome = i
         end
     end
 
-    println(outcome)
-    # 581
+    println(outocome)
 end
 
 solve()

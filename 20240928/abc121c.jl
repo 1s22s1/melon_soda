@@ -24,10 +24,10 @@ function solve()
     for (a, b) ∈ drinks
         # お店の商品を全部購入する
         if m ≥ b
-            outcome += a*b
+            outcome += a * b
             m -= b
         else
-            outcome += a*m
+            outcome += a * m
 
             break
         end

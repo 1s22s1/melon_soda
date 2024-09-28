@@ -14,18 +14,12 @@ function parsestrings()
 end
 
 function solve()
-    n = parseint()
-    mountains = Dict()
+    n, k = parseints()
+    ln = parseints()
 
-    for _ ∈ 1:n
-        s, t = parsestrings()
+    sort!(ln)
 
-        mountains[s] = parse(Int, t)
-    end
-
-    mountains = sort(collect(mountains), by=x->x[2], rev=true)
-
-    println(mountains[2][1])
+    ln[n-k+1:end] |> sum |> println
 end
 
 solve()

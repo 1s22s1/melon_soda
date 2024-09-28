@@ -15,17 +15,20 @@ end
 
 function solve()
     n = parseint()
-    mountains = Dict()
+
+    dict = Dict()
 
     for _ ∈ 1:n
         s, t = parsestrings()
 
-        mountains[s] = parse(Int, t)
+        dict[s] = parse(Int, t)
     end
 
-    mountains = sort(collect(mountains), by=x->x[2], rev=true)
+    sort_dict = sort(collect(dict), by = x -> x[2], rev = true)
 
-    println(mountains[2][1])
+    println(sort_dict[2][1])
 end
 
 solve()
+
+# T56my0NX7rlIeX
