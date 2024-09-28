@@ -15,13 +15,13 @@ end
 
 function solve()
     n, m = parseints()
-    municipalities = [parseints() for _ ∈ 1:m]
+    municipalities = sort!([parseints() for _ ∈ 1:m])
 
     dict = Dict()
 
     for (p, y) ∈ municipalities
         if haskey(dict, p)
-            dict[p] = sort(push!(dict[p], y))
+            dict[p] = push!(dict[p], y)
         else
             dict[p] = [y]
         end
