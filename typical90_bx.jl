@@ -17,19 +17,23 @@ function solve()
     n = parseint()
     an = parseints()
 
+    target = sum(an) ÷ 10
     ring = repeat(an, 2)
 
     for i ∈ 1:2n
         total = 0
 
-        for j ∈ 1:2n
+        for j ∈ i:2n
             total += ring[j]
 
-            if total == sum(an) ÷ 10
+            if total == target
                 println("Yes")
 
                 exit()
+            elseif total > target
+                break
             end
+
         end
     end
 
