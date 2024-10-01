@@ -33,7 +33,10 @@ function solve()
             current_prefecture = prefecture
         end
 
-        dict[getkey(prefecture, year)] = "$(lpad(string(prefecture), 6, "0"))$(lpad(string(city_number), 6, "0"))"
+        dict[getkey(
+            prefecture,
+            year,
+        )] = "$(lpad(string(prefecture), 6, "0"))$(lpad(string(city_number), 6, "0"))"
 
         city_number += 1
     end

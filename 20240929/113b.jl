@@ -14,7 +14,7 @@ function parsestrings()
 end
 
 function temperature(t, x)
-    return 1000t-6x
+    return 1000t - 6x
 end
 
 function solve()

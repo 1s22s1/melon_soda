@@ -14,18 +14,18 @@ function parsestrings()
 end
 
 function solve()
-    n = parseint()
     s = parsestring()
+    rev_s = reverse(s)
 
-    alphabets = repeat(collect('A':'Z'), 2)
+    outcome = 0
 
-    for c ∈ s
-        index = findfirst(x -> x == c, alphabets)
-
-        print(alphabets[index+n])
+    for i ∈ eachindex(s)
+        if s[i] ≠ rev_s[i]
+            outcome += 1
+        end
     end
 
-    println("")
+    println(outcome)
 end
 
 solve()

@@ -23,7 +23,7 @@ function solve()
         mountains[s] = parse(Int, t)
     end
 
-    mountains = sort(collect(mountains), by=x->x[2], rev=true)
+    mountains = sort(collect(mountains), by = x -> x[2], rev = true)
 
     println(mountains[2][1])
 end
