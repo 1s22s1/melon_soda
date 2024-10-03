@@ -21,7 +21,8 @@ function solve()
         sub_string_length = length(sub_string)
 
         if sub_string_length % 2 == 0
-            if sub_string[begin:sub_string_length÷2] == sub_string[sub_string_length÷2+1:end]
+            if sub_string[begin:sub_string_length÷2] ==
+               sub_string[sub_string_length÷2+1:end]
                 println(sub_string_length)
 
                 exit()
