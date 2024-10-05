@@ -13,6 +13,13 @@ function parsestrings()
     return readline() |> split
 end
 
+function swapstr(str, i, j)
+    tmp = collect(str)
+    tmp[i], tmp[j] = tmp[j], tmp[i]
+
+    return join(tmp)
+end
+
 function solve()
     s = parsestring()
     t = parsestring()
@@ -23,10 +30,8 @@ function solve()
         exit()
     end
 
-    for _ ∈ 1:length(s)-1
-        s = s[end] * s[begin:end-1]
-
-        if s == t
+    for i ∈ 1:length(s)-1
+        if swapstr(s, i, i+1) == t
             println("Yes")
 
             exit()

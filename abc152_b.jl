@@ -14,26 +14,16 @@ function parsestrings()
 end
 
 function solve()
-    s = parsestring()
-    t = parsestring()
+    a, b = parseints()
 
-    if s == t
-        println("Yes")
+    ab = string(a)^b
+    ba = string(b)^a
 
-        exit()
+    if ab < ba
+        println(ab)
+    else
+        println(ba)
     end
-
-    for _ ∈ 1:length(s)-1
-        s = s[end] * s[begin:end-1]
-
-        if s == t
-            println("Yes")
-
-            exit()
-        end
-    end
-
-    println("No")
 end
 
 solve()
