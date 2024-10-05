@@ -31,7 +31,7 @@ function solve()
     end
 
     for i ∈ 1:length(s)-1
-        if swapstr(s, i, i+1) == t
+        if swapstr(s, i, i + 1) == t
             println("Yes")
 
             exit()

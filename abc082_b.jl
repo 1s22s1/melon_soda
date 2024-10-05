@@ -26,7 +26,7 @@ function solve()
     # t′ = join(sort(collect(t), rev=true))
 
     s′ = join(sort(split(s, "")))
-    t′ = join(sort(split(t, ""), rev=true))
+    t′ = join(sort(split(t, ""), rev = true))
 
     if s′ < t′
         println("Yes")
