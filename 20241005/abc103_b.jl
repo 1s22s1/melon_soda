@@ -23,9 +23,8 @@ function solve()
         exit()
     end
 
-    for i ∈ 1:length(s)-1
-        tmp_ary = collect(s)
-        s = tmp_ary[end] * join(tmp_ary[begin:end-1])
+    for _ ∈ 1:length(s)-1
+        s = s[end] * s[begin:end-1]
 
         if s == t
             println("Yes")
