@@ -14,7 +14,26 @@ function parsestrings()
 end
 
 function solve()
-    gomora
+    s = parsestring()
+    t = parsestring()
+
+    if s == t
+        println(0)
+
+        exit()
+    end
+
+    min_length = min(length(s), length(t))
+
+    for i ∈ 1:min_length
+        if s[i] ≠ t[i]
+            println(i)
+
+            exit()
+        end
+    end
+
+    println(min_length + 1)
 end
 
 solve()

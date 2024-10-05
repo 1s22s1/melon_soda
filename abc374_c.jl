@@ -14,7 +14,27 @@ function parsestrings()
 end
 
 function solve()
-    gomora
+    n = parseint()
+    kn = parseints()
+
+    outcome = typemax(Int)
+
+    for bit ∈ 0:(1<<n)-1
+        s = Int[]
+        t = Int[]
+
+        for i ∈ 0:length(kn)-1
+            if bit & 1 << i ≠ 0
+                push!(s, kn[i+1])
+            else
+                push!(t, kn[i+1])
+            end
+        end
+
+        outcome = min(outcome, max(sum(s), sum(t)))
+    end
+
+    println(outcome)
 end
 
 solve()

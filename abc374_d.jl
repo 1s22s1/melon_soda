@@ -14,13 +14,7 @@ function parsestrings()
 end
 
 function solve()
-    s = parsestring()
-
-    if s[end-2:end] == "san"
-        println("Yes")
-    else
-        println("No")
-    end
+    gomora
 end
 
 solve()
