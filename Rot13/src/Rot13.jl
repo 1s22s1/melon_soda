@@ -16,6 +16,17 @@ const lookup_table = Dict(
     'M' => 'Z',
     'N' => 'A',
     'O' => 'B',
+    'P' => 'C',
+    'Q' => 'D',
+    'R' => 'E',
+    'S' => 'F',
+    'T' => 'G',
+    'U' => 'H',
+    'V' => 'I',
+    'W' => 'J',
+    'X' => 'K',
+    'Y' => 'L',
+    'Z' => 'M',
 )
 
 function rot13(text)
